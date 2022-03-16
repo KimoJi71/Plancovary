@@ -1,0 +1,50 @@
+body {
+    height: 100vh;
+    background-image: url("../assets/SoundOne/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-y: hidden;
+}
+.textContainer {
+    padding: 60px 0 10px 8em;
+}
+#bottomText {
+    margin-left: 30px;
+}
+.text {
+    color: #7D7D7D;
+    font-size: 20px;
+}
+.options {
+    text-align: center;
+}
+#left {
+    margin-right: 5em;
+}
+#left, #right {
+    width: 350px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .textContainer {
+        padding: 60px 0 10px 50px;
+    }
+    .text {
+        font-size: small;
+    }
+    #left, #right {
+        width: 250px;
+    }
+    #left {
+        margin: 0 0 20px 0;
+    }
+}
+@media (max-width: 576px) {
+    .textContainer {
+        padding: 30px 0 10px 50px;
+    }
+    #left, #right {
+        width: 200px;
+    }
+}

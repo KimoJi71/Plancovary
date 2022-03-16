@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    background-image: url("../assets/Start/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-y: hidden;
+}
+#plancovary {
+    width: 250px;
+}
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#welcome {
+    margin-top: 30px;
+    width: 250px;
+}
+#start {
+    width: 250px;
+    cursor: pointer;
+}
+@media (max-width: 576px) {
+    .plancovary {
+        text-align: center;
+        padding: 5em 0 0 0;
+    }
+    #plancovary {
+        width: 200px;
+    }
+    #start {
+        padding-top: 5em;
+    }
+}

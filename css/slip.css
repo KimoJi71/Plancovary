@@ -1,0 +1,8 @@
+body {
+    height: 100vh;
+    background-image: url("../assets/Slip/background.gif");
+    background-position: center;
+    background-size: cover;
+    overflow-y: hidden;
+    cursor: pointer;
+}
