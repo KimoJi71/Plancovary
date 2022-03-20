@@ -7,7 +7,6 @@ $(document).ready(function() {
         clearInterval(animate)
     }
     var animate = setInterval(type, 1000);
-
 });
 
 var userAgentInfo = navigator.userAgent; // 判斷手機版或電腦版
@@ -16,7 +15,6 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     $("#left").click(function(e) {
         let leftHref = $(".left").attr("href");
         if (leftHref === "") {
-            console.log("1");
             e.preventDefault();
             $("#left").attr("src", "../assets/Creation/leftAfter.png");
             $("#right").attr("src", "../assets/Creation/rightBefore.png");
@@ -27,7 +25,6 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     $("#right").click(function(e) {
         let rightHref = $(".right").attr("href");
         if (rightHref === "") {
-            console.log("2");
             e.preventDefault();
             $("#right").attr("src", "../assets/Creation/rightAfter.png");
             $("#left").attr("src", "../assets/Creation/leftBefore.png");
