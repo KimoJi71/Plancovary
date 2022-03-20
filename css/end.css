@@ -1,5 +1,5 @@
 body {
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     cursor: pointer;
 }
 .object {
@@ -20,7 +20,7 @@ p {
 	-webkit-animation: blur 10s ease-out alternate;
     animation-fill-mode: forwards;
 }
-@media (max-width: 576px) {
+@media screen and (max-height: 900px) {
     p {
         font-size: 20px;
     }

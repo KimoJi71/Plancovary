@@ -15,7 +15,7 @@ body {
     text-align: center;
 }
 p {
-    font-size: 25px;
+    font-size: 23px;
     color: #7D7D7D;
 }
 #start {
@@ -29,6 +29,9 @@ p {
     #start {
         width: 200px;
     }
+    p {
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 700px) {
     #plancovary {
@@ -37,6 +40,9 @@ p {
     #start {
         width: 180px;
     }
+    p {
+        font-size: 18px;
+    }
 }
 @media screen and (max-width: 576px) {
     .plancovary {
@@ -44,7 +50,7 @@ p {
         padding: 5em 0 0 0;
     }
     #plancovary {
-        width: 200px;
+        width: 150px;
     }
 }
 @media screen and (max-height: 900px) {
@@ -52,7 +58,6 @@ p {
         margin-top: 5em;
     }
     p {
-        font-size: 20px;
         margin-top: 40px;
     }
     #start {
@@ -64,7 +69,6 @@ p {
         margin-top: 3em;
     }
     p {
-        font-size: 20px;
         margin-top: 40px;
     }
     #start {

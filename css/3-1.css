@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 .textContainer {
     padding: 60px 0 10px 8em;
@@ -18,6 +18,9 @@ body {
 }
 .options {
     text-align: center;
+}
+.left, .right {
+    text-decoration: none;
 }
 #left {
     margin-right: 5em;
@@ -46,5 +49,21 @@ body {
     }
     #left, #right {
         width: 200px;
+    }
+}
+@media (max-width: 380px) {
+    .text {
+        font-size: xx-small;
+    }
+}
+@media (max-height: 500px) {
+    .text {
+        font-size: 15px;
+    }
+    #left, #right {
+        width: 200px;
+    }
+    #left {
+        margin-right: 50px;
     }
 }

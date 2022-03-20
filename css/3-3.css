@@ -4,8 +4,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow-y: hidden;
     cursor: pointer;
+    /* overflow-y: hidden; */
 }
 #question {
     height: 100vh;
@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 .textContainer {
     padding: 60px 0 10px 8em;
@@ -28,18 +28,20 @@
 }
 .options {
     text-align: center;
-    text-justify: start;
 }
-#topOptions {
+.topLeft, .topRight, .bottomLeft, .bottomRight {
+    text-decoration: none;
+}
+#topLeft, #topRight {
     margin-top: 5em;
 }
-#bottomOptions {
+#bottomLeft, #bottomRight {
     margin-top: 2em;
 }
-.left {
+#topLeft, #bottomLeft {
     margin-right: 5em;
 }
-.left, .right {
+#topLeft, #topRight, #bottomLeft, #bottomRight {
     width: 250px;
     cursor: pointer;
 }
@@ -48,28 +50,49 @@
         padding: 60px 0 10px 50px;
         margin-bottom: 2em;
     }
-    #topOptions {
-        margin-top: 3em;
+    #topLeft, #topRight {
+        margin-top: 2em;
     }
-    #bottomOptions {
+    #bottomLeft, #bottomRight {
         margin-top: 2em;
     }
     .text {
         font-size: small;
     }
-    .left, .right {
+    #topLeft, #topRight, #bottomLeft, #bottomRight {
         width: 250px;
     }
-    .left {
+    #topLeft, #bottomLeft {
         margin-right: 0;
-        margin-bottom: 2em;
     }
 }
 @media (max-width: 576px) {
     .textContainer {
         padding: 30px 0 10px 50px;
     }
-    .left, .right {
+    #topLeft, #topRight, #bottomLeft, #bottomRight {
         width: 200px;
+    }
+}
+@media (max-width: 380px) {
+    .text {
+        font-size: xx-small;
+    }
+}
+@media (max-height: 500px) {
+    .text {
+        font-size: 15px;
+    }
+    #topLeft, #topRight {
+        margin-top: 5px;
+    }
+    #bottomLeft, #bottomRight {
+        margin-top: 30px;
+    }
+    #topLeft, #topRight, #bottomLeft, #bottomRight {
+        width: 200px;
+    }
+    #topLeft, #bottomLeft {
+        margin-right: 50px;
     }
 }

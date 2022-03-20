@@ -1,34 +1,83 @@
+// 載入時
 $(document).ready(function() {
-    $("body").hide().fadeIn(2000);
     $(".textContainer").hide().fadeIn(2000);
-    $(".options").hide().fadeIn(2000);
+    $(".options").hide();
+    function type() {  
+        $(".options").hide().fadeIn(2000);
+        clearInterval(animate)
+    }
+    var animate = setInterval(type, 1000);
 });
 
-// 圖片特效轉換
-$("#left").bind("touchstart mouseover", function() {
-    var sound = document.getElementById("soundOne");
-    sound.play();
-    $("#left").attr("src", "../assets/SoundTwo/leftAfter.png");
-});
-$("#left").bind("touchend mouseout", function() {
-    var sound = document.getElementById("soundOne");
-    sound.pause();
-    sound.currentTime = 0;
-    $("#left").attr("src", "../assets/SoundTwo/leftBefore.png");
-});
-$("#right").bind("touchstart mouseover", function() {
-    var sound = document.getElementById("soundTwo");
-    sound.play();
-    $("#right").attr("src", "../assets/SoundTwo/rightAfter.png");
-});
-$("#right").bind("touchend mouseout", function() {
-    var sound = document.getElementById("soundTwo");
-    sound.pause();
-    sound.currentTime = 0;
-    $("#right").attr("src", "../assets/SoundTwo/rightBefore.png");
-});
+var userAgentInfo = navigator.userAgent; // 判斷手機版或電腦版
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
+    // 效果
+    $("#left").click(function(e) {
+        let leftHref = $(".left").attr("href");
+        if (leftHref === "") {
+            e.preventDefault();
+            var soundTwo = document.getElementById("soundTwo");
+            soundTwo.pause();
+            soundTwo.currentTime = 0;
+            var soundOne = document.getElementById("soundOne");
+            soundOne.play();
+            $("#left").attr("src", "../assets/SoundTwo/leftAfter.png");
+            $("#right").attr("src", "../assets/SoundTwo/rightBefore.png");
+            $(".left").attr("href", "./end.html");
+            $(".right").attr("href", "");
 
-// 圖片點擊後
-$("#left, #right").click(function() {
-    $(location).attr("href", "./end.html");
-});
+            window.sessionStorage.setItem("factor", "遠方的警示燈");
+        }
+    });
+    $("#right").click(function(e) {
+        let rightHref = $(".right").attr("href");
+        if (rightHref === "") {
+            e.preventDefault();
+            var soundOne = document.getElementById("soundOne");
+            soundOne.pause();
+            soundOne.currentTime = 0;
+            var soundTwo = document.getElementById("soundTwo");
+            soundTwo.play();
+            $("#right").attr("src", "../assets/SoundTwo/rightAfter.png");
+            $("#left").attr("src", "../assets/SoundTwo/leftBefore.png");
+            $(".right").attr("href", "./end.html");
+            $(".left").attr("href", "");
+
+            window.sessionStorage.setItem("factor", "受傷的血痕");
+        }
+    });
+    
+} else {
+    // 效果
+    $("#left").bind("mouseover", function() {
+        var sound = document.getElementById("soundOne");
+        sound.play();
+        $("#left").attr("src", "../assets/SoundTwo/leftAfter.png")
+    });
+    $("#left").bind("mouseout", function() {
+        var sound = document.getElementById("soundOne");
+        sound.pause();
+        sound.currentTime = 0;
+        $("#left").attr("src", "../assets/SoundTwo/leftBefore.png")
+    });
+    $("#right").bind("mouseover", function() {
+        var sound = document.getElementById("soundTwo");
+        sound.play();
+        $("#right").attr("src", "../assets/SoundTwo/rightAfter.png");
+    });
+    $("#right").bind("mouseout", function() {
+        var sound = document.getElementById("soundTwo");
+        sound.pause();
+        sound.currentTime = 0;
+        $("#right").attr("src", "../assets/SoundTwo/rightBefore.png");
+    });
+    // 點擊選項
+    $(".left").click(function() {
+        window.sessionStorage.setItem("factor", "遠方的警示燈");
+        $(".left").attr("href", "./end.html");
+    });
+    $(".right").click(function() {
+        window.sessionStorage.setItem("factor", "受傷的血痕");
+        $(".right").attr("href", "./end.html");
+    });
+}
