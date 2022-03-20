@@ -1,27 +1,60 @@
+// 載入時
 $(document).ready(function() {
-    $("body").hide().fadeIn(2000);
     $(".textContainer").hide().fadeIn(2000);
-    $(".options").hide().fadeIn(2000);
+    $(".options").hide();
+    function type() {  
+        $(".options").hide().fadeIn(2000);
+        clearInterval(animate)
+    }
+    var animate = setInterval(type, 1000);
+
 });
 
-// 圖片特效轉換
-$("#left").bind("touchstart mouseover", function() {
-    $("#left").attr("src", "../assets/Creation/leftAfter.png");
-});
-$("#left").bind("touchend mouseout", function() {
-    $("#left").attr("src", "../assets/Creation/leftBefore.png");
-});
-$("#right").bind("touchstart mouseover", function() {
-    $("#right").attr("src", "../assets/Creation/rightAfter.png");
-});
-$("#right").bind("touchend mouseout", function() {
-    $("#right").attr("src", "../assets/Creation/rightBefore.png");
-});
-
-// 圖片點擊後
-$("#left").click(function() {
-    $(location).attr("href", "./2-1.html");
-});
-$("#right").click(function() {
-    $(location).attr("href", "./2-2.html");
-});
+var userAgentInfo = navigator.userAgent; // 判斷手機版或電腦版
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
+    // 效果
+    $("#left").click(function(e) {
+        let leftHref = $(".left").attr("href");
+        if (leftHref === "") {
+            console.log("1");
+            e.preventDefault();
+            $("#left").attr("src", "../assets/Creation/leftAfter.png");
+            $("#right").attr("src", "../assets/Creation/rightBefore.png");
+            $(".left").attr("href", "./2-1.html");
+            $(".right").attr("href", "");
+        }
+    });
+    $("#right").click(function(e) {
+        let rightHref = $(".right").attr("href");
+        if (rightHref === "") {
+            console.log("2");
+            e.preventDefault();
+            $("#right").attr("src", "../assets/Creation/rightAfter.png");
+            $("#left").attr("src", "../assets/Creation/leftBefore.png");
+            $(".right").attr("href", "./2-2.html");
+            $(".left").attr("href", "");
+        }
+    });
+    
+} else {
+    // 效果
+    $("#left").bind("mouseover", function() {
+        $("#left").attr("src", "../assets/Creation/leftAfter.png")
+    });
+    $("#left").bind("mouseout", function() {
+        $("#left").attr("src", "../assets/Creation/leftBefore.png")
+    });
+    $("#right").bind("mouseover", function() {
+        $("#right").attr("src", "../assets/Creation/rightAfter.png");
+    });
+    $("#right").bind("mouseout", function() {
+        $("#right").attr("src", "../assets/Creation/rightBefore.png");
+    });
+    // 點擊選項
+    $(".left").click(function() {
+        $(".left").attr("href", "./2-1.html");
+    });
+    $(".right").click(function() {
+        $(".right").attr("href", "./2-2.html");
+    });
+}

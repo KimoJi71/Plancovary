@@ -1,8 +1,47 @@
-body {
+.object {
     height: 100vh;
     background-image: url("../assets/Slip/background.gif");
     background-position: center;
     background-size: cover;
     overflow-y: hidden;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    text-align: center;
+}
+p {
+    margin: 10px;
+    font-size: 23px;
+    color: transparent;
+    animation: blur 8s ease-out alternate;
+	-webkit-animation: blur 8s ease-out alternate;
+    animation-fill-mode: forwards;
+}
+@media screen and (max-height: 900px) {
+    p {
+        font-size: 20px;
+    }
+}
+@keyframes blur {
+	0%      {text-shadow: 0 0 100px #7D7D7D; opacity: 0;}
+	10%	    {text-shadow: 0 0 90px #7D7D7D;}
+	20%	    {opacity: 1;}
+	30%	    {text-shadow: 0 0 0px #7D7D7D;}
+	75%	    {text-shadow: 0 0 0px #7D7D7D;}
+	80%	    {opacity: 1;}
+	90%	    {text-shadow: 0 0 0px #7D7D7D;}
+	100%    {text-shadow: 0 0 0px #7D7D7D; opacity: 1;}
+}
+@-webkit-keyframes blur {
+	0%		{text-shadow: 0 0 100px #7D7D7D; opacity: 0;}
+	10%		{text-shadow: 0 0 90px #7D7D7D;}
+	20%		{opacity: 1;}
+	30%		{text-shadow: 0 0 0px #7D7D7D;}
+	75%		{text-shadow: 0 0 0px #7D7D7D;}
+	80%		{opacity: 1;}
+	90%		{text-shadow: 0 0 0px #7D7D7D;}
+	100%	{text-shadow: 0 0 0px #7D7D7D; opacity: 1;}
 }

@@ -1,7 +1,6 @@
 $(document).ready(function() {
-    $("body").hide().fadeIn(2000);
     $("#plancovary").hide().fadeIn(2000);
-    $("#welcome").hide().fadeIn(2000);
+    $("p").hide().fadeIn(2000);
     $("#start").hide().fadeIn(2000);
 });
 

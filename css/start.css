@@ -4,25 +4,41 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 #plancovary {
     width: 250px;
 }
 .welcome {
-    display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
-#welcome {
-    margin-top: 30px;
-    width: 250px;
+p {
+    font-size: 25px;
+    color: #7D7D7D;
 }
 #start {
     width: 250px;
     cursor: pointer;
 }
-@media (max-width: 576px) {
+@media screen and (max-width: 900px) {
+    #plancovary {
+        width: 180px;
+    }
+    #start {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 700px) {
+    #plancovary {
+        width: 150px;
+    }
+    #start {
+        width: 180px;
+    }
+}
+@media screen and (max-width: 576px) {
     .plancovary {
         text-align: center;
         padding: 5em 0 0 0;
@@ -30,7 +46,28 @@ body {
     #plancovary {
         width: 200px;
     }
+}
+@media screen and (max-height: 900px) {
+    #upText {
+        margin-top: 5em;
+    }
+    p {
+        font-size: 20px;
+        margin-top: 40px;
+    }
     #start {
-        padding-top: 5em;
+        padding-top: 7em;
+    }
+}
+@media screen and (max-height: 700px) {
+    #upText {
+        margin-top: 3em;
+    }
+    p {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    #start {
+        padding-top: 3em;
     }
 }
