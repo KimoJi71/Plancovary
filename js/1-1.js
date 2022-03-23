@@ -1,5 +1,8 @@
+var music = document.getElementById("music");
 // 載入時
 $(document).ready(function() {
+    music.currentTime = localStorage.getItem("music_time");
+    music.play();
     $(".textContainer").hide().fadeIn(2000);
     $(".options").hide();
     function type() {  
@@ -14,6 +17,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     // 效果
     $("#left").click(function(e) {
         let leftHref = $(".left").attr("href");
+        localStorage.setItem("music_time", music.currentTime);
         if (leftHref === "") {
             e.preventDefault();
             $("#left").attr("src", "../assets/Creation/leftAfter.png");
@@ -24,6 +28,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     });
     $("#right").click(function(e) {
         let rightHref = $(".right").attr("href");
+        localStorage.setItem("music_time", music.currentTime);
         if (rightHref === "") {
             e.preventDefault();
             $("#right").attr("src", "../assets/Creation/rightAfter.png");
@@ -49,9 +54,11 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     });
     // 點擊選項
     $(".left").click(function() {
+        localStorage.setItem("music_time", music.currentTime);
         $(".left").attr("href", "./2-1.html");
     });
     $(".right").click(function() {
+        localStorage.setItem("music_time", music.currentTime);
         $(".right").attr("href", "./2-2.html");
     });
 }

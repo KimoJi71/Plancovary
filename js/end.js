@@ -1,6 +1,14 @@
-// 按鈕點擊後
+var music = document.getElementById("music");
+// 載入時
+$(document).ready(function() {
+    music.currentTime = localStorage.getItem("music_time");
+    music.play();
+});
+
+// 點擊後
 $("body").click(function() {
     let factor = window.sessionStorage.getItem("factor");
+    localStorage.setItem("music_time", music.currentTime);
     if (factor === "不明的異世界生物" || factor === "宇宙的粒子") {
         $(location).attr("href", "./widsom.html");
     }

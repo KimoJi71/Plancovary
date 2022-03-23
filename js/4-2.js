@@ -1,5 +1,8 @@
+var music = document.getElementById("music");
 // 載入時
 $(document).ready(function() {
+    music.currentTime = localStorage.getItem("music_time");
+    music.play();
     $(".textContainer").hide().fadeIn(2000);
     $(".options").hide();
     function type() {  
@@ -14,6 +17,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     // 效果
     $("#left").click(function(e) {
         let leftHref = $(".left").attr("href");
+        localStorage.setItem("music_time", music.currentTime);
         if (leftHref === "") {
             e.preventDefault();
             var soundTwo = document.getElementById("soundTwo");
@@ -31,6 +35,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     });
     $("#right").click(function(e) {
         let rightHref = $(".right").attr("href");
+        localStorage.setItem("music_time", music.currentTime);
         if (rightHref === "") {
             e.preventDefault();
             var soundOne = document.getElementById("soundOne");
@@ -74,10 +79,12 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     // 點擊選項
     $(".left").click(function() {
         window.sessionStorage.setItem("factor", "遠方的警示燈");
+        localStorage.setItem("music_time", music.currentTime);
         $(".left").attr("href", "./end.html");
     });
     $(".right").click(function() {
         window.sessionStorage.setItem("factor", "受傷的血痕");
+        localStorage.setItem("music_time", music.currentTime);
         $(".right").attr("href", "./end.html");
     });
 }

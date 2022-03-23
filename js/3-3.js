@@ -1,5 +1,8 @@
+var music = document.getElementById("music");
 // 載入時
 $(document).ready(function() {
+    music.currentTime = localStorage.getItem("music_time");
+    music.play();
     $(".textContainer").hide().fadeIn(2000);
     $(".options").hide();
     function type() {  
@@ -14,6 +17,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     // 效果
     $("#topLeft").click(function(e) {
         let topLeftHref = $(".topLeft").attr("href");
+        localStorage.setItem("music_time", music.currentTime);
         if (topLeftHref === "") {
             e.preventDefault();
             $("#topLeft").attr("src", "../assets/Forest/optionOneAfter.png");
@@ -30,6 +34,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     });
     $("#topRight").click(function(e) {
         let topRightHref = $(".topRight").attr("href");
+        localStorage.setItem("music_time", music.currentTime);
         if (topRightHref === "") {
             e.preventDefault();
             $("#topRight").attr("src", "../assets/Forest/optionTwoAfter.png");
@@ -46,6 +51,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     });
     $("#bottomLeft").click(function(e) {
         let bottomLeftHref = $(".bottomLeft").attr("href");
+        localStorage.setItem("music_time", music.currentTime);
         if (bottomLeftHref === "") {
             e.preventDefault();
             $("#bottomLeft").attr("src", "../assets/Forest/optionThreeAfter.png");
@@ -62,6 +68,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     });
     $("#bottomRight").click(function(e) {
         let bottomRightHref = $(".bottomRight").attr("href");
+        localStorage.setItem("music_time", music.currentTime);
         if (bottomRightHref === "") {
             e.preventDefault();
             $("#bottomRight").attr("src", "../assets/Forest/optionFourAfter.png");
@@ -106,23 +113,28 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     // 點擊選項
     $(".topLeft").click(function() {
         window.sessionStorage.setItem("factor", "不明的異世界生物");
+        localStorage.setItem("music_time", music.currentTime);
         $(".topLeft").attr("href", "./end.html");
     });
     $(".topRight").click(function() {
         window.sessionStorage.setItem("factor", "被濫砍的神木");
+        localStorage.setItem("music_time", music.currentTime);
         $(".topRight").attr("href", "./end.html");
     });
     $(".bottomLeft").click(function() {
         window.sessionStorage.setItem("factor", "神社的遺址");
+        localStorage.setItem("music_time", music.currentTime);
         $(".bottomLeft").attr("href", "./end.html");
     });
     $(".bottomRight").click(function() {
         window.sessionStorage.setItem("factor", "受傷的小動物");
+        localStorage.setItem("music_time", music.currentTime);
         $(".bottomRight").attr("href", "./end.html");
     });
 }
 
 // 過場圖片點擊
 $("#slip").click(function() {
+    localStorage.setItem("music_time", music.currentTime);
     $(location).attr("href", "./3-3.html");
 });
