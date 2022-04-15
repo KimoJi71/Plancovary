@@ -1,3 +1,7 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+    font-family: "Noto Sans TC";
+}
 .object {
     height: 100vh;
     background-image: url("../assets/Slip/background.gif");
@@ -13,16 +17,33 @@
     text-align: center;
 }
 p {
-    margin: 10px;
-    font-size: 23px;
+    font-size: 24px;
+    margin: 0;
+    white-space: pre;
     color: transparent;
     animation: blur 8s ease-out alternate;
 	-webkit-animation: blur 8s ease-out alternate;
     animation-fill-mode: forwards;
 }
-@media screen and (max-height: 900px) {
+.upText {
+    display: inline-block;
+}
+#upText:before {
+    content: "＿＿    "
+}
+.bottomText:after {
+    content: "                                                     ";
+}
+@media screen and (max-width: 700px) {
     p {
         font-size: 20px;
+        white-space: normal;
+    }
+    .upText {
+        display: inherit;
+    }
+    #upText:before {
+        content: "";
     }
 }
 @keyframes blur {

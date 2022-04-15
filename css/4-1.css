@@ -1,3 +1,7 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+    font-family: "Noto Sans TC";
+}
 body {
     height: 100vh;
     background-image: url("../assets/SoundThree/background.png");
@@ -7,14 +11,28 @@ body {
     /* overflow-y: hidden; */
 }
 .textContainer {
-    padding: 60px 0 10px 8em;
+    text-align: center;
+    padding-top: 7em;
+    padding-bottom: 4em;
+    margin-bottom: 1em;
+}
+p {
+    color: #7D7D7D;
+    font-size: 24px;
+    margin: 0;
+}
+#upText {
+    white-space: pre;
+    margin-bottom: 10px;
+}
+#upText:before {
+    content: "＿＿    ";
 }
 #bottomText {
-    margin-left: 30px;
+    white-space: pre;
 }
-.text {
-    color: #7D7D7D;
-    font-size: 20px;
+#bottomText:after {
+    content: "     "
 }
 .options {
     text-align: center;
@@ -24,17 +42,17 @@ body {
     text-decoration: none;
 }
 #left {
-    margin-right: 5em;
+    margin-right: 8em;
 }
 #left, #right {
-    width: 350px;
+    width: 300px;
     cursor: pointer;
 }
 @media (max-width: 768px) {
     .textContainer {
         padding: 60px 0 10px 50px;
     }
-    .text {
+    p {
         font-size: small;
     }
     #left, #right {
@@ -53,7 +71,7 @@ body {
     }
 }
 @media (max-width: 380px) {
-    .text {
+    p {
         font-size: xx-small;
     }
 }
@@ -61,7 +79,7 @@ body {
     .textContainer {
         padding: 60px 0 0px 3em;
     }
-    .text {
+    p {
         font-size: 15px;
     }
     #left, #right {

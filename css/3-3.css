@@ -1,3 +1,7 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+    font-family: "Noto Sans TC";
+}
 #slip {
     height: 100vh;
     background-image: url("../assets/Forest/backgroundGIF.gif");
@@ -16,24 +20,34 @@
     /* overflow-y: hidden; */
 }
 .textContainer {
-    padding: 60px 0 10px 8em;
+    text-align: center;
+    padding-top: 7em;
+    padding-bottom: 4em;
     margin-bottom: 2em;
 }
-#bottomText {
-    margin-left: 30px;
+p {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 0;
 }
-.text {
-    color: #D5D2CF;
-    font-size: 20px;
+#upText {
+    white-space: pre;
+    margin-bottom: 10px;
+}
+#upText:before {
+    content: "＿＿    ";
+}
+#bottomText {
+    white-space: pre;
+}
+#bottomText:after {
+    content: "                     "
 }
 .options {
     text-align: center;
 }
 .topLeft, .topRight, .bottomLeft, .bottomRight {
     text-decoration: none;
-}
-#topLeft, #topRight {
-    margin-top: 5em;
 }
 #bottomLeft, #bottomRight {
     margin-top: 2em;
@@ -42,7 +56,7 @@
     margin-right: 5em;
 }
 #topLeft, #topRight, #bottomLeft, #bottomRight {
-    width: 250px;
+    width: 220px;
     cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -56,7 +70,7 @@
     #bottomLeft, #bottomRight {
         margin-top: 2em;
     }
-    .text {
+    p {
         font-size: small;
     }
     #topLeft, #topRight, #bottomLeft, #bottomRight {
@@ -75,12 +89,12 @@
     }
 }
 @media (max-width: 380px) {
-    .text {
+    p {
         font-size: xx-small;
     }
 }
 @media (max-height: 500px) {
-    .text {
+    p {
         font-size: 15px;
     }
     #topLeft, #topRight {
