@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 * {
     font-family: "Noto Sans TC";
+    font-weight: 400;
 }
 body {
     height: 100vh;
@@ -8,7 +9,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 .textContainer {
     text-align: center;
@@ -18,18 +19,27 @@ body {
 }
 p {
     color: #7D7D7D;
-    font-size: 24px;
+    font-size: 22px;
     margin: 0;
 }
+#brOne, #brThree {
+    display: none;
+}
 #upText {
-    white-space: pre;
     margin-bottom: 10px;
 }
 #upText:before {
     content: "＿＿    ";
 }
-#upText:after {
+#middleTextOne:after {
     content: "                          "
+}
+#upText, #middleTextOne {
+    display: inline-block;
+    white-space: pre;
+}
+#middleTextTwo, #bottomText {
+    display: inline-block;
 }
 .options {
     text-align: center;
@@ -44,46 +54,36 @@ p {
     width: 250px;
     cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 565px) {
     .textContainer {
-        padding: 60px 0 10px 50px;
-        margin-bottom: 2em;
+        padding: 72px 10px 0;
     }
     p {
-        font-size: small;
+        font-size: 18px;
     }
-    #left, #right {
-        width: 250px;
+    #brOne, #brThree {
+        display: inherit;
+    }
+    #brTwo {
+        display: none;
+    }
+    #upText:after {
+        content: "                       "
+    }
+    #middleTextOne, #middleTextTwo {
+        display: inline-block;
+    }
+    #middleTextOne {
+        white-space: normal;
+    }
+    #upText, #middleTextTwo {
+        margin-bottom: 7px;
     }
     #left {
         margin-right: 0;
-        margin-bottom: 3em;
-    }
-    #right {
-        margin-bottom: 3em;
-    }
-}
-@media (max-width: 576px) {
-    .textContainer {
-        padding: 30px 0 10px 50px;
+        margin-bottom: 15px;
     }
     #left, #right {
-        width: 200px;
-    }
-}
-@media (max-width: 380px) {
-    p {
-        font-size: xx-small;
-    }
-}
-@media (max-height: 500px) {
-    p {
-        font-size: 15px;
-    }
-    #left, #right {
-        width: 200px;
-    }
-    #left {
-        margin-right: 50px;
+        width: 180px;
     }
 }

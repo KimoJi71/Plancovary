@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 * {
     font-family: "Noto Sans TC";
+    font-weight: 400;
 }
 body {
     height: 100vh;
@@ -8,18 +9,21 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 .textContainer {
     text-align: center;
     padding-top: 7em;
     padding-bottom: 4em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 p {
     color: #7D7D7D;
-    font-size: 24px;
+    font-size: 22px;
     margin: 0;
+}
+#brOne, #brThree {
+    display: none;
 }
 #upText {
     white-space: pre;
@@ -27,6 +31,12 @@ p {
 }
 #upText:before {
     content: "＿＿    ";
+}
+#upText, #middleTextOne {
+    display: inline-block;
+}
+#middleTextTwo, #bottomText {
+    display: inline-block;
 }
 #bottomText {
     white-space: pre;
@@ -36,7 +46,6 @@ p {
 }
 .options {
     text-align: center;
-    margin-top: 3em;
 }
 .left, .right {
     text-decoration: none;
@@ -48,45 +57,33 @@ p {
     width: 300px;
     cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 565px) {
     .textContainer {
-        padding: 60px 0 10px 50px;
+        padding: 72px 32px 0;
     }
     p {
-        font-size: small;
+        font-size: 18px;
+    }
+    #brOne, #brThree {
+        display: inherit;
+    }
+    #brTwo {
+        display: none;
+    }
+    #middleTextOne, #middleTextTwo {
+        display: inline-block;
+    }
+    #bottomText {
+        white-space: normal;
+    }
+    #upText, #middleTextTwo {
+        margin-bottom: 7px;
+    }
+    #left {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
     #left, #right {
         width: 250px;
-    }
-    #left {
-        margin: 0 0 20px 0;
-    }
-}
-@media (max-width: 576px) {
-    .textContainer {
-        padding: 30px 0 10px 50px;
-    }
-    #left, #right {
-        width: 200px;
-    }
-}
-@media (max-width: 380px) {
-    p {
-        font-size: xx-small;
-    }
-}
-@media (max-height: 500px) {
-    .textContainer {
-        padding: 60px 0 0px 3em;
-    }
-    p {
-        font-size: 15px;
-    }
-    #left, #right {
-        width: 200px;
-    }
-    #left {
-        margin-right: 50px;
-        margin-bottom: 0;
     }
 }

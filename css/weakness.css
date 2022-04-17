@@ -1,8 +1,14 @@
 body {
     height: 100vh;
-    background-image: url("../assets/Weakness/background.png");
+    background-image: url("../assets/Weakness/background.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    /* overflow-y: hidden; */
+    background-size: contain;
+    background-color: #0A0808;
+    overflow-y: hidden;
+}
+@media (max-width: 820px) {
+    body {
+        background-image: url("../assets/Weakness/backgroundMobile.jpg");
+    }
 }

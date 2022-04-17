@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 * {
     font-family: "Noto Sans TC";
+    font-weight: 400;
 }
 body {
     /* overflow-y: hidden; */
@@ -18,15 +19,15 @@ body {
 }
 p {
     margin: 2px;
-    font-size: 28px;
+    font-size: 26px;
     color: transparent;
     animation: blur 10s ease-out alternate;
 	-webkit-animation: blur 10s ease-out alternate;
     animation-fill-mode: forwards;
 }
-@media screen and (max-height: 500px) {
+@media screen and (max-width: 565px) {
     p {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 @keyframes blur {

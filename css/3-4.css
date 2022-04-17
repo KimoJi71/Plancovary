@@ -48,47 +48,20 @@ p {
     width: 250px;
     cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .textContainer {
-        padding: 60px 0 10px 50px;
-        margin-bottom: 7em;
+        padding: 72px 64px 0;
+        margin-bottom: 9em;
     }
     p {
-        font-size: small;
-    }
-    #left, #right {
-        width: 250px;
+        font-size: 18px;
+        margin: 10px;
     }
     #left {
         margin-right: 0;
-        margin-bottom: 5em;
-    }
-}
-@media (max-width: 576px) {
-    .textContainer {
-        padding: 30px 0 10px 50px;
-    }
-    #left, #right {
-        width: 200px;
-    }
-}
-@media (max-width: 380px) {
-    p {
-        font-size: xx-small;
-    }
-}
-@media (max-height: 500px) {
-    .textContainer {
         margin-bottom: 2em;
     }
-    p {
-        font-size: 15px;
-    }
     #left, #right {
         width: 200px;
-    }
-    #left {
-        margin-right: 50px;
-        margin-bottom: 0;
     }
 }

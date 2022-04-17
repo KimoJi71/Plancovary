@@ -25,8 +25,8 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
             soundTwo.currentTime = 0;
             var soundOne = document.getElementById("soundOne");
             soundOne.play();
-            $("#left").attr("src", "../assets/SoundThree/leftAfter.png");
-            $("#right").attr("src", "../assets/SoundThree/rightBefore.png");
+            $("#left").attr("src", "../assets/SoundThree/after.png");
+            $("#right").attr("src", "../assets/SoundThree/before.png");
             $(".left").attr("href", "./end.html");
             $(".right").attr("href", "");
 
@@ -43,8 +43,8 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
             soundOne.currentTime = 0;
             var soundTwo = document.getElementById("soundTwo");
             soundTwo.play();
-            $("#right").attr("src", "../assets/SoundThree/rightAfter.png");
-            $("#left").attr("src", "../assets/SoundThree/leftBefore.png");
+            $("#right").attr("src", "../assets/SoundThree/after.png");
+            $("#left").attr("src", "../assets/SoundThree/before.png");
             $(".right").attr("href", "./end.html");
             $(".left").attr("href", "");
 
@@ -57,24 +57,24 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     $("#left").bind("mouseover", function() {
         var sound = document.getElementById("soundOne");
         sound.play();
-        $("#left").attr("src", "../assets/SoundThree/leftAfter.png")
+        $("#left").attr("src", "../assets/SoundThree/after.png")
     });
     $("#left").bind("mouseout", function() {
         var sound = document.getElementById("soundOne");
         sound.pause();
         sound.currentTime = 0;
-        $("#left").attr("src", "../assets/SoundThree/leftBefore.png")
+        $("#left").attr("src", "../assets/SoundThree/before.png")
     });
     $("#right").bind("mouseover", function() {
         var sound = document.getElementById("soundTwo");
         sound.play();
-        $("#right").attr("src", "../assets/SoundThree/rightAfter.png");
+        $("#right").attr("src", "../assets/SoundThree/after.png");
     });
     $("#right").bind("mouseout", function() {
         var sound = document.getElementById("soundTwo");
         sound.pause();
         sound.currentTime = 0;
-        $("#right").attr("src", "../assets/SoundThree/rightBefore.png");
+        $("#right").attr("src", "../assets/SoundThree/before.png");
     });
     // 點擊選項
     $(".left").click(function() {
