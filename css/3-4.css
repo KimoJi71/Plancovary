@@ -70,6 +70,10 @@ p {
     #left, #right {
         width: 200px;
     }
+    .options {
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media screen and (max-width: 320px) {
     .textContainer {

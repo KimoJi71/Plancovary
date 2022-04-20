@@ -108,6 +108,10 @@ p {
     #topLeft, #bottomLeft {
         margin-right: 0;
     }
+    .options {
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media screen and (max-width: 320px) {
     .textContainer {
