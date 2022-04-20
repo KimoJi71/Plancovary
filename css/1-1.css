@@ -113,7 +113,7 @@ p {
         padding: 80px 40px 24px;
     }
     #left, #right {
-        width: 200px;
+        width: 250px;
     }
 }
 @media screen and (max-height: 430px) {
