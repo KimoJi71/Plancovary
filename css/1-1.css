@@ -108,7 +108,7 @@ p {
         width: 220px;
     }
 }
-@media screen and (max-width: 420px) and (max-height: 900px) and (min-height: 735px) and (-webkit-device-pixel-ratio: 2) {
+@media screen and (device-width: 420px) and (device-height: 900px) and (device-height: 735px) and (-webkit-device-pixel-ratio: 2) {
     .textContainer {
         padding: 80px 40px 24px;
     }
