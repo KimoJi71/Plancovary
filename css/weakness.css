@@ -12,7 +12,7 @@ body {
         background-image: url("../assets/Weakness/backgroundMobile.jpg");
     }
 }
-@media screen and (max-height: 565px) {
+@media screen and (max-height: 500px) {
     body {
         background-image: url("../assets/Weakness/background.jpg");
     }
