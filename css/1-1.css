@@ -72,10 +72,10 @@ p {
         margin-bottom: 15px;
     }
     #left, #right {
-        width: 200px;
+        width: 180px;
     }
 }
-/* @media screen and (max-width: 320px) {
+@media screen and (max-width: 320px) {
     .textContainer {
         padding: 40px 32px 0;
     }
@@ -158,4 +158,4 @@ p {
     #left, #right {
         width: 140px;
     }
-} */
+}
