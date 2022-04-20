@@ -89,7 +89,7 @@ p {
         width: 160px;
     }
 }
-@media screen and (max-width: 565px) and (max-height: 1200px) and (min-height: 735px) {
+@media screen and (max-width: 565px) and (max-height: 1200px) and (min-height: 735px) and (-webkit-device-pixel-ratio: 2) {
     .textContainer {
         padding: 72px 40px 24px;
     }
@@ -103,12 +103,12 @@ p {
         width: 260px;
     }
 }
-@media screen and (max-width: 428px) and (max-height: 950px) and (min-height: 735px) {
+@media screen and (max-width: 428px) and (max-height: 950px) and (min-height: 735px) and (-webkit-device-pixel-ratio: 2) {
     #left, #right {
         width: 220px;
     }
 }
-@media screen and (max-width: 420px) and (max-height: 900px) and (min-height: 735px) {
+@media screen and (max-width: 420px) and (max-height: 900px) and (min-height: 735px) and (-webkit-device-pixel-ratio: 2) {
     .textContainer {
         padding: 80px 40px 24px;
     }
