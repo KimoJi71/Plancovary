@@ -106,9 +106,9 @@ p {
         width: 160px;
     }
 }
-@media screen and (max-width: 565px) and (max-height: 900px) and (min-height: 735px) {
+@media screen and (max-width: 565px) and (max-height: 950px) and (min-height: 735px) {
     .textContainer {
-        padding: 80px 10px 24px;
+        padding: 72px 10px 24px;
     }
     p {
         font-size: 20px;
@@ -117,10 +117,18 @@ p {
         margin-bottom: 30px;
     }
     #left, #right {
+        width: 220px;
+    }
+}
+@media screen and (max-width: 420px) and (max-height: 900px) and (min-height: 735px) {
+    .textContainer {
+        padding: 80px 10px 24px;
+    }
+    #left, #right {
         width: 200px;
     }
 }
-@media screen and (max-height: 420px) {
+@media screen and (max-height: 430px) {
     .textContainer {
         padding: 56px 0;
         margin: 0;
