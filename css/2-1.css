@@ -121,7 +121,7 @@ p {
         margin-bottom: 30px;
     }
     #left, #right {
-        width: 260px;
+        width: 220px;
     }
 }
 @media screen and (max-width: 459px) and (max-height: 950px) and (min-height: 735px) {
