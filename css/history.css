@@ -1,19 +1,26 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+    font-family: "Noto Sans TC";
+    font-weight: 400;
+}
 body {
+    background-color: #151515;
+    overflow-y: hidden;
+}
+.wrapper {
     height: 100vh;
     background-image: url("../assets/History/background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-color: #151515;
-    overflow-y: hidden;
 }
 @media screen and (max-width: 820px) {
-    body {
+    .wrapper {
         background-image: url("../assets/History/backgroundMobile.jpg");
     }
 }
 @media screen and (max-height: 500px) {
-    body {
+    .wrapper {
         background-image: url("../assets/History/background.jpg");
     }
 }
