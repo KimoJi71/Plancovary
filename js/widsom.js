@@ -5,3 +5,6 @@ $(document).ready(function() {
     music.play();
     $("body").hide().fadeIn(3500);
 });
+$("#seeMore").click(function() {
+    console.log("Clicked!");
+});
