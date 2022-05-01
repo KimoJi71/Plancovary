@@ -1,10 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-* {
-    font-family: "Noto Sans TC";
-    font-weight: 400;
-}
 body {
-    /* overflow-y: hidden; */
     cursor: pointer;
 }
 .object {
