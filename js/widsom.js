@@ -6,5 +6,5 @@ $(document).ready(function() {
     $("body").hide().fadeIn(3500);
 });
 $("#seeMore").click(function() {
-    console.log("Clicked!");
+    alert("等待網址......");
 });
