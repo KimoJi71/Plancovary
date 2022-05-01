@@ -6,6 +6,7 @@
 body {
     background-color: #080404;
     overflow-y: hidden;
+    cursor: pointer;
 }
 .wrapper {
     height: 100vh;

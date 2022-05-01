@@ -5,6 +5,6 @@ $(document).ready(function() {
     music.play();
     $("body").hide().fadeIn(3500);
 });
-$("#seeMore").click(function() {
+$(".wrapper").click(function() {
     alert("等待網址......");
 });
