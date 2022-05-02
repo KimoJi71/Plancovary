@@ -19,12 +19,12 @@ $("#start").bind("touchend mouseout", function() {
 // 按鈕點擊後
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     const start = document.getElementById("start");
-    start.addEventListener("touchstart", e => {
-        e.preventDefault();
-        music.play();
-    });
+    // start.addEventListener("touchstart", e => {
+    //     e.preventDefault();
+    // });
     start.addEventListener("click", e => {
         e.preventDefault();
+        music.play();
         localStorage.setItem("music_time", music.currentTime);
         $(location).attr("href", "./slip.html");
     });
