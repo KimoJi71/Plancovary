@@ -2,6 +2,7 @@ var music = document.getElementById("music");
 
 $(document).ready(function() {
     music.currentTime = localStorage.getItem("music_time");
+    music.load();
     music.play();
     $("body").hide().fadeIn(2000);
 });

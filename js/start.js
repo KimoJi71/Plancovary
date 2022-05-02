@@ -19,9 +19,6 @@ $("#start").bind("touchend mouseout", function() {
 // 按鈕點擊後
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     const start = document.getElementById("start");
-    // start.addEventListener("touchstart", e => {
-    //     e.preventDefault();
-    // });
     start.addEventListener("click", e => {
         e.preventDefault();
         music.play();
