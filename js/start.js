@@ -20,9 +20,14 @@ $("#start").bind("touchend mouseout", function() {
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     const start = document.getElementById("start");
     start.addEventListener("touchstart", e => {
-        e.preventDefault()
+        e.preventDefault();
         music.play();
-    })
+    });
+    start.addEventListener("click", e => {
+        e.preventDefault();
+        localStorage.setItem("music_time", music.currentTime);
+        $(location).attr("href", "./slip.html");
+    });
 } else {
     $("#start").click(function() {
         localStorage.setItem("music_time", music.currentTime);
