@@ -21,7 +21,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(userAgentInfo)) {
     const start = document.getElementById("start");
     start.addEventListener("touchstart", e => {
         e.preventDefault()
-        alert("touchstart event!")
+        music.play();
     })
 } else {
     $("#start").click(function() {
