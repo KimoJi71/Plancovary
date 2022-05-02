@@ -1,3 +1,5 @@
+var music = document.getElementById("music");
+
 $(document).ready(function() {
     $("#plancovary").hide().fadeIn(2000);
     $("p").hide().fadeIn(2000);
@@ -14,5 +16,6 @@ $("#start").bind("touchend mouseout", function() {
 
 // 按鈕點擊後
 $("#start").click(function() {
+    localStorage.setItem("music_time", music.currentTime);
     $(location).attr("href", "./slip.html");
 });
