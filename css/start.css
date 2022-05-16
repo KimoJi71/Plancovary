@@ -16,8 +16,11 @@ body {
 }
 p {
     font-size: 24px;
-    color: #7D7D7D;
     display: inline-block;
+    color: transparent;
+    animation: blur 8s ease-out alternate;
+	-webkit-animation: blur 8s ease-out alternate;
+    animation-fill-mode: forwards;
 }
 #start {
     width: 300px;
@@ -103,4 +106,25 @@ p {
         width: 200px;
         margin-top: 1em;
     }
+}
+
+@keyframes blur {
+	0%      {text-shadow: 0 0 100px #7D7D7D; opacity: 0;}
+	10%	    {text-shadow: 0 0 90px #7D7D7D;}
+	20%	    {opacity: 1;}
+	30%	    {text-shadow: 0 0 0px #7D7D7D;}
+	75%	    {text-shadow: 0 0 0px #7D7D7D;}
+	80%	    {opacity: 1;}
+	90%	    {text-shadow: 0 0 0px #7D7D7D;}
+	100%    {text-shadow: 0 0 0px #7D7D7D; opacity: 1;}
+}
+@-webkit-keyframes blur {
+	0%		{text-shadow: 0 0 100px #7D7D7D; opacity: 0;}
+	10%		{text-shadow: 0 0 90px #7D7D7D;}
+	20%		{opacity: 1;}
+	30%		{text-shadow: 0 0 0px #7D7D7D;}
+	75%		{text-shadow: 0 0 0px #7D7D7D;}
+	80%		{opacity: 1;}
+	90%		{text-shadow: 0 0 0px #7D7D7D;}
+	100%	{text-shadow: 0 0 0px #7D7D7D; opacity: 1;}
 }
