@@ -15,10 +15,10 @@ $("body").click(function() {
     if (factor === "神社的遺址" || factor === "滑落的雨滴") {
         $(location).attr("href", "./history.html");
     }
-    if (factor === "被濫砍的神木" || factor === "遠方的警示燈") {
+    if (factor === "虛弱的螢火蟲" || factor === "遠方的警示燈") {
         $(location).attr("href", "./environment.html");
     }
-    if (factor === "受傷的小動物" || factor === "受傷的血痕") {
+    if (factor === "遠方的求救訊號" || factor === "受傷的血痕") {
         $(location).attr("href", "./weakness.html");
     }
 });

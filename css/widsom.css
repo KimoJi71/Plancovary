@@ -5,18 +5,50 @@ body {
 }
 .wrapper {
     height: 100vh;
-    background-image: url("../assets/Widsom/background.jpg");
+    background-image: url("../assets/Widsom/background.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
+.more {
+    text-decoration: none;
+}
+#more {
+    width: 200px;
+    right: 0;
+    bottom: 0;
+    position:fixed;
+}
 @media screen and (max-width: 820px) {
     .wrapper {
-        background-image: url("../assets/Widsom/backgroundMobile.jpg");
+        background-image: url("../assets/Widsom/backgroundMobile.gif");
+    }
+    #more {
+        width: 200px;
+        right: -20px;
+    }
+}
+@media screen and (max-width: 565px) {
+    #more {
+        width: 150px;
+    }
+}
+@media screen and (max-width: 350px) {
+    #more {
+        width: 120px;
     }
 }
 @media screen and (max-height: 500px) {
     .wrapper {
-        background-image: url("../assets/Widsom/background.jpg");
+        background-image: url("../assets/Widsom/background.gif");
+    }
+    #more {
+        width: 150px;
+        right: 0;
+    }
+}
+@media screen and (max-height: 350px) {
+    #more {
+        width: 130px;
     }
 }
